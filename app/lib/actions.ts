@@ -2,7 +2,7 @@
 
 import {z} from "zod";
 import { revalidatePath } from "next/cache";
-import { redirect, Redirect } from "next/navigation";
+import { redirect } from "next/navigation";
 import postgres from "postgres";
 
 const FormSchema = z.object({
