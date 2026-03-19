@@ -40,9 +40,10 @@ export async function createInvoice(prevState: State, formData: FormData) {
     if (!validatedFields.success) {
       return {
         errors: validatedFields.error.flatten().fieldErrors,
-        message: 'Missing Fields. Failed to Create Invoice.'
+        message: 'Missing Fields. Failed to Create Invoice.',
       };
     }
+  const { customerId, amount, status } = validatedFields.data;
     const amountInCents = amount *  100;
     const date = new Date().toISOString().split('T')[0];
 
@@ -52,13 +53,12 @@ export async function createInvoice(prevState: State, formData: FormData) {
     VALUES (${customerId}, ${amountInCents}, ${status}, ${date})
   `;
     } catch (error) {
-      console.error(error);
       return {
-        message: 'Database Error: Failed to Create Invoice.'
+        message: 'Database Error: Failed to Create Invoice.',
       };
     }
 
-  revalidatePath('dashboard/invoices');
+  revalidatePath('/dashboard/invoices');
   redirect('/dashboard/invoices');
 }
 
