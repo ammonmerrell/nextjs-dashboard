@@ -14,7 +14,12 @@ import {
  LatestInvoicesSkeleton,
 CardsSkeleton,
 } from '@/app/ui/skeletons';
- 
+ import { metaData } from 'app/dashboard/(overview)/layout'
+
+export const metadata: Metadata = {
+  title: 'LoginPage',
+};
+
 export default async function Page() {
    const {
     numberOfInvoices,
