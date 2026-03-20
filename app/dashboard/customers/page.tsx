@@ -1,5 +1,5 @@
-import { metaData } from 'app/dashboard/customers/layout'
-
+// import { metadata } from 'app/dashboard/customers/layout'
+import { Metadata} from 'next'
 export const metadata: Metadata = {
   title: 'Customers Page',
 };

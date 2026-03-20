@@ -14,7 +14,8 @@ import {
  LatestInvoicesSkeleton,
 CardsSkeleton,
 } from '@/app/ui/skeletons';
- import { Metadata } from 'app/dashboard/(overview)/layout'
+import { Metadata } from 'next'
+//  import { Metadata } from 'app/dashboard/(overview)/layout'
 
 export const metadata: Metadata = {
   title: 'Home',
