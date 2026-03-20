@@ -8,3 +8,28 @@ export const metadata: Metadata = {
   description: 'The official Next.js Learn loginpage, built with App Router.',
   metadataBase: new URL('https://next-learn-dashboard.vercel.sh/login'),
 };
+
+import '@/app/ui/global.css';
+import  { inter } from 'app/ui/fonts';
+import { MetaData } from 'next';
+
+export const metaData: MetaData = {
+  title: {
+    template: '%s | Acme create',
+    default: 'Acme create',
+  },
+  description: 'The ofiicial Next.js Course create invoice page, built with App Router.',
+  metadataBase: new URL('https://next-learn-dashboard.vercel.sh/invoices'),
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body className= { '${inter.className} antialiased'}>{children}</body>
+    </html>
+  );
+}

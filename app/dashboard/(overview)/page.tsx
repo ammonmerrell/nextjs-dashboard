@@ -17,7 +17,7 @@ CardsSkeleton,
  import { metaData } from 'app/dashboard/(overview)/layout'
 
 export const metadata: Metadata = {
-  title: 'LoginPage',
+  title: 'Home',
 };
 
 export default async function Page() {

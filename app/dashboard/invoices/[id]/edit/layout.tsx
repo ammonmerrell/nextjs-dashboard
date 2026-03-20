@@ -1,8 +1,8 @@
 import '@/app/ui/global.css';
 import  { inter } from 'app/ui/fonts';
-import { MetaData } from 'next';
+import { Metadata } from 'next';
 
-export const metaData: MetaData = {
+export const metadata: Metadata = {
   title: {
     template: '%s | Acme edit',
     default: 'Acme edit',
