@@ -10,7 +10,7 @@ import{ Metadata } from 'next';
 import { metaData } from 'app/dashboard/invoices/layout'
 
 export const metadata: Metadata = {
-  title: 'Invoices',
+  title: 'Invoices | Acme Dashboard',
 };
 
 export default async function Page(props:{
